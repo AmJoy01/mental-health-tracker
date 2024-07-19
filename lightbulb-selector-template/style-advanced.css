@@ -1,0 +1,88 @@
+/* The first several elements that are styled are really just for the purpose of having */
+      /* Border-box sizing, Default to a sans-serif font throughout */
+      *, *:before, *:after {-webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; } html { font-family: sans-serif; }
+
+        @keyframes scaleAnimation {
+            0%   {transform: scale(1, 1);}
+            50%  {transform: scale(2, 2);}
+            100% {transform: scale(1, 1);}
+        }
+        
+        @keyframes rotateAnimation {
+            0%   {transform: rotate(0deg);}
+            50%  {transform: rotate(180deg);}
+            100% {transform: rotate(0deg);}
+        }
+        
+        @keyframes slideUpDownAnimation {
+            0%   {transform: translateY(0px);}
+            25%  {transform: translateY(10px);}
+            75% {transform: translateY(-10px);}
+            100% {transform: translateY(0px);}
+        }
+        
+        @keyframes slideLeftRightAnimation {
+            0%   {transform: translateX(0px);}
+            25%  {transform: translateX(10px);}
+            75% {transform: translateX(-10px);}
+            100% {transform: translateX(0px);}
+        }
+
+
+      /* Black background color */
+      body {
+        background-color: black;
+      }
+
+      /* put everything inside a wrapper so  */
+      #wrapper {
+        width: 800px;
+        max-width: 90%;
+        margin: auto;
+        background-color: rgba(255, 255, 255, 0.2);
+        margin-top: 0;
+        min-height: 100vh;
+      }
+
+      .row {
+        padding-top: 25px;
+        display: flex;
+        width: 100%;
+        flex-wrap: wrap;
+        justify-content: space-around;
+      }
+
+      .item {
+        border-radius: 10px;
+        text-align: center;
+        background-color: black;
+        padding: 10px;
+        margin: 20px;
+        transition: 0.2s;
+      }
+
+      .taco {
+        font-size: 100px;
+      }
+
+      .active {
+        box-shadow: 0 0 35px white;
+      }
+      
+      .scale {
+          animation: scaleAnimation 5s infinite ease;
+      }
+      
+      .rotate {
+          animation: rotateAnimation 5s infinite ease;
+      }
+      
+      .slideUpDown {
+          animation: slideUpDownAnimation 5s infinite ease;
+      }
+      
+      .slideLeftRight {
+          animation: slideLeftRightAnimation 5s infinite ease;
+      }
+      
+      
